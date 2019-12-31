@@ -1,6 +1,6 @@
 {% set name = "dodgy" %}
-{% set version = "0.1.9" %}
-{% set sha256 = "65e13cf878d7aff129f1461c13cb5fd1bb6dfe66bb5327e09379c3877763280c" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "9064d93de9dd72fda4081d13d11b394402e4013d511085eefaa7be0576ee9418" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:

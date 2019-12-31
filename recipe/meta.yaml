@@ -1,6 +1,6 @@
 {% set name = "dodgy" %}
-{% set version = "0.1.9" %}
-{% set sha256 = "65e13cf878d7aff129f1461c13cb5fd1bb6dfe66bb5327e09379c3877763280c" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "28323cbfc9352139fdd3d316fa17f325cc0e9ac74438cbba51d70f9b48f86c3a" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -31,6 +31,7 @@ test:
 about:
   home: https://github.com/landscapeio/dodgy
   license: MIT
+  license_file: LICENSE
   summary: 'Dodgy: Searches for dodgy looking lines in Python code'
 
 extra:
